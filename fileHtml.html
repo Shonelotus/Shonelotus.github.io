@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcolatrice.js</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+		button {
+			width: 30px;
+			height: 30px;
+		}
+	</style>
+
+    <script>
+    var primoNumero = null;
+    var operatore = null;
+
+    function aggiungiNumero(numero) {
+        var risultato = document.getElementById("risultato");
+        if (risultato.value == "0") {
+            risultato.value = numero;
+        } else {
+            risultato.value += numero;
+        }
+    }
+
+    function operazione(operando) {
+        var risultato = document.getElementById("risultato");
+        primoNumero = parseFloat(risultato.value);
+        operatore = operando;
+        risultato.value = "0";
+    }
+
+    function calcola() {
+        var risultato = document.getElementById("risultato");
+        var secondoNumero = parseFloat(risultato.value);
+        var risultatoFinale;
+        switch (operatore) {
+            case "+":
+                risultatoFinale = primoNumero + secondoNumero;
+                break;
+            case "-":
+                risultatoFinale = primoNumero - secondoNumero;
+                break;
+            case "*":
+                risultatoFinale = primoNumero * secondoNumero;
+                break;
+            case "/":
+                risultatoFinale = primoNumero / secondoNumero;
+                break;
+    }
+        risultato.value = risultatoFinale;
+        primoNumero = null;
+        operatore = null;
+}
+
+    function reset() {
+        var risultato = document.getElementById("risultato");
+        risultato.value = "0";
+        primoNumero = null;
+        operatore = null;
+    }
+
+    </script>
+</head>
+<body><center>
+    <h1>CALCOLATRICE</h1>
+	<input type="text" id="risultato" disabled="disabled" /><br>
+    <br>
+	<button onclick="aggiungiNumero('1')"> 1 </button>
+	<button onclick="aggiungiNumero('2')"> 2 </button>
+	<button onclick="aggiungiNumero('3')"> 3 </button>
+	<button onclick="operazione('+')">+</button><br>
+	<button onclick="aggiungiNumero('4')"> 4 </button>
+	<button onclick="aggiungiNumero('5')"> 5 </button>
+	<button onclick="aggiungiNumero('6')"> 6 </button>
+	<button onclick="operazione('-')"> - </button><br>
+	<button onclick="aggiungiNumero('7')"> 7 </button>
+	<button onclick="aggiungiNumero('8')"> 8 </button>
+	<button onclick="aggiungiNumero('9')"> 9 </button>
+	<button onclick="operazione('*')"> * </button><br>
+	<button onclick="aggiungiNumero('0')"> 0 </button>
+	<button onclick="aggiungiNumero('.')"> . </button>
+	<button onclick="calcola()"> = </button>
+	<button onclick="operazione('/')"> / </button><br>
+	<button onclick="reset()"> C </button>
+</center></body>
+</html>
