@@ -1,0 +1,60 @@
+body{
+    background-color: lightblue;
+}
+
+h1{
+    font-size: 60px;
+    color:white;
+    text-shadow: 2.5px 2.5px #9c9c9c;
+}
+
+.inputTesto
+{
+    width: 400px;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 10px;
+    border-color: #d7d7d7;
+}
+
+.inputData
+{
+    width: 150px;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 10px;
+    border-color: #d7d7d7;
+}
+
+.buttonInvia
+{
+    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+    background-color: #0062cc;
+    color: white;
+}
+
+img
+{
+    height: 40px;
+    width: 45px;
+}
+
+.tabellaLinea
+{
+    border: "1";
+    background-color: white;
+
+}
+
+p
+{
+    width: 400px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 10px;
+    border-color: #d7d7d7;
+    background-color: white;
+    padding: auto;;
+}

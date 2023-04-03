@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+
+    <script type="text/javascript" src="CEvento.js"></script>
+    <script type="text/javascript" src="CLista.js"></script>
+
+    <script type="text/javascript">
+        const evento = new CEvento();
+        const lista = new CLista();
+        
+        function pulisci() 
+        {
+            document.querySelector('input[type="text"]').value = '';
+        }
+    </script>
+
+
+</head>
+
+<body><center>
+
+    <h1>TODO LIST +</h1>
+
+    <div id="inputEvento">
+        <table >
+            <tr>
+                <td><input type="text" class="inputTesto" name="testo" id="testo" value="Inserisci cosa devi ricordare" onfocus="pulisci()"></td>
+                <td><input type="date" class="inputData" name="data" id="data"></td>
+                <td><button class="buttonInvia" onclick="lista.addToList()">Aggiungi</button></td>
+            </tr>
+        </table>
+    </div>
+        <br>
+    <div class="tabellaLista" >
+        <table class="tabellaLinea" >
+            <tr class="row" hidden>
+                <td class="immagini" id="img1"><img src="immagini/vuota.png" onclick="lista.fatto(1)"></td>
+                <td class="testo" id="testo1"></td>
+                <td class="bottoni" id="btn1" onclick = "lista.rimuovi(1)"></td>
+            </tr>
+            <tr class="row" hidden>
+                <td class="immagini" id="img2"><img src="immagini/vuota.png" onclick="lista.fatto(2)"></td>
+                <td class="testo" id="testo2"></td>
+                <td class="bottoni" id="btn2"></td>
+            </tr>
+    </div>
+
+</center></body>
+</html>
