@@ -4,7 +4,7 @@ import java.io.FileWriter;
 public class dipendente 
 {
 
-    //csv sarà tipo: ufficio1;dipendenti;nome*cognome*......ufficio1;
+    //csv sarà tipo: ufficio1;dipendenti;;nome*cognome*......ufficio1**...
 
     // Dichiarazione delle variabili di istanza
     private String nome;
@@ -39,7 +39,7 @@ public class dipendente
     // Metodo per visualizzare il dipendente
     public String visualizzaDipendente() 
     {
-        return this.nome + "*" + this.cognome + "*" + this.indirizzoResidenza + "*" + this.dataDiNascita + "*" + this.oreSettimanali + "*" + this.nomeUfficio + ";";
+        return this.nome + "*" + this.cognome + "*" + this.indirizzoResidenza + "*" + this.dataDiNascita + "*" + this.oreSettimanali + "*" + this.nomeUfficio + "+";
     }
 
     public void salvaSuFile(String nomeFile)
